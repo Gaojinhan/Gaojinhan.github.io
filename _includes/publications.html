@@ -1,0 +1,26 @@
+{% if include.papers.size > 0 %}
+<h2 id="{{ include.id }}">{{ include.title }}</h2>
+<div class="paper-list">
+  <ol class="bibliography">
+    {% for paper in include.papers %}
+    <li class="paper">
+      {% assign paper_url = paper.doi | default: paper.pdf | default: paper.page %}
+      <h3 class="paper-title">{% if paper_url %}<a href="{{ paper_url | escape }}">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}</h3>
+      <div class="paper-authors">{{ paper.authors }}</div>
+      {% if paper.venue %}<div class="paper-venue"><em>{{ paper.venue | escape }}</em>{% if paper.details %}, {{ paper.details | escape }}{% endif %}{% if paper.year %}, {{ paper.year }}{% endif %}.</div>{% endif %}
+      {% if paper.note %}<div class="paper-note">{{ paper.note | escape }}</div>{% endif %}
+      {% if paper.status %}<div class="paper-status">{{ paper.status | escape }}</div>{% endif %}
+      {% if paper.doi or paper.pdf or paper.code or paper.bibtex or paper.page %}
+      <div class="paper-links">
+        {% if paper.doi %}<a href="{{ paper.doi | escape }}" aria-label="DOI for {{ paper.title | escape }}">DOI</a>{% endif %}
+        {% if paper.pdf %}<a href="{{ paper.pdf | relative_url }}" aria-label="PDF for {{ paper.title | escape }}">PDF</a>{% endif %}
+        {% if paper.code %}<a href="{{ paper.code | escape }}" aria-label="Code for {{ paper.title | escape }}">Code</a>{% endif %}
+        {% if paper.page %}<a href="{{ paper.page | escape }}" aria-label="Project page for {{ paper.title | escape }}">Project</a>{% endif %}
+        {% if paper.bibtex %}<a href="{{ paper.bibtex | relative_url }}" aria-label="BibTeX for {{ paper.title | escape }}">BibTeX</a>{% endif %}
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</div>
+{% endif %}

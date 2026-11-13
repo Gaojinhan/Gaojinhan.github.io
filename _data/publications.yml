@@ -1,22 +1,18 @@
+# Published papers, newest first. Omit links that are not available.
 main:
+  - title: "Simulation-based decision support for pre-deployment evaluation of cloud manufacturing auctions"
+    authors: "<strong>Jinhan Gao</strong>, Ricardo Knoblauch, Mohamed El Mansori"
+    venue: "The International Journal of Advanced Manufacturing Technology"
+    year: 2026
+    note: "Published online 20 October 2026"
+    doi: https://doi.org/10.1007/s00170-026-19280-2
+    code: https://github.com/Gaojinhan/policy-cce-reproducibility
+    bibtex: /assets/bibtex/gao2026simulation.bib
 
-  - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-    authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
-    conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
-
-  - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
-    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+  - title: "Towards the platformization of manufacturing SMEs through public cloud manufacturing resource allocation: A critical analysis of methods and future directions"
+    authors: "<strong>Jinhan Gao</strong>, Ricardo Knoblauch, Mohamed El Mansori"
+    venue: "Computers & Industrial Engineering"
+    year: 2026
+    details: "211, 111632"
+    doi: https://doi.org/10.1016/j.cie.2025.111632
+    bibtex: /assets/bibtex/gao2026platformization.bib

@@ -1,0 +1,9 @@
+# Manuscripts under review or in progress, separate from published work.
+main:
+  - title: "A Multi-Unit Multi-Attribute Auction Mechanism for Cloud Manufacturing Platforms"
+    authors: "<strong>Jinhan Gao</strong>, Ceyhun Eksin, Ricardo Knoblauch, Mohamed El Mansori"
+    status: "Under review"
+
+  - title: "A two-stage learning framework for surface-quality-driven parameter correction in CNC face milling"
+    authors: "<strong>Jinhan Gao</strong>, Ricardo Knoblauch, Mohamed El Mansori"
+    status: "Submitted"
