@@ -6,7 +6,7 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. researcher at [Arts et Métiers Institute of Technology (ENSAM)](https://artsetmetiers.fr/en), supervised by Prof. Mohamed El Mansori and Prof. Ricardo Knoblauch. My research focuses on **mechanism design for two-sided manufacturing platforms**, combining applied game theory and mathematical optimization to study incentives and resource allocation.
+I am a Ph.D. researcher at [Arts et Métiers Institute of Technology (ENSAM)](https://artsetmetiers.fr/en), supervised by [Prof. Mohamed El Mansori](https://scholar.google.com/citations?user=PmeejfAAAAAJ&hl=en) and Prof. Ricardo Knoblauch. My research focuses on **mechanism design for two-sided manufacturing platforms**, combining applied game theory and mathematical optimization to study incentives and resource allocation.
 
 My doctoral research is part of [MARS — Manufacturing Architecture for Resilience and Sustainability](https://mars-horizon.eu/), funded by the European Union’s Horizon Europe programme. I collaborate with [Prof. Ceyhun Eksin](https://netmas.engr.tamu.edu/people/ceyhun-eksin/) at the [Networked Multiagent Systems Lab](https://netmas.engr.tamu.edu/), Texas A&M University, on theoretical and algorithmic development, and with [Noosware](https://www.noosware.com/#contact) on software implementation. The resulting platform is undergoing beta testing with industrial and research partners, including [inspire AG](https://www.inspire.ch/) and [STIL Marposs](https://mars-horizon.eu/who-we-are/).
 

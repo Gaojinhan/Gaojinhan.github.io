@@ -8,6 +8,10 @@ main:
     doi: https://doi.org/10.1007/s00170-026-19280-2
     code: https://github.com/Gaojinhan/policy-cce-reproducibility
     bibtex: /assets/bibtex/gao2026simulation.bib
+    image: /assets/img/publications/simulation-auctions.png
+    image_alt: "Cloud manufacturing auction workflow with incoming orders and long-lived manufacturers"
+    image_width: 2034
+    image_height: 1169
 
   - title: "Towards the platformization of manufacturing SMEs through public cloud manufacturing resource allocation: A critical analysis of methods and future directions"
     authors: "<strong>Jinhan Gao</strong>, Ricardo Knoblauch, Mohamed El Mansori"
@@ -16,3 +20,7 @@ main:
     details: "211, 111632"
     doi: https://doi.org/10.1016/j.cie.2025.111632
     bibtex: /assets/bibtex/gao2026platformization.bib
+    image: /assets/img/publications/manufacturing-platformization.png
+    image_alt: "Manufacturing platform connecting resource demanders and providers through matching and auctions"
+    image_width: 1333
+    image_height: 784

@@ -15,6 +15,7 @@ Based on [Minimal Light](https://github.com/yaoyao-liu/minimal-light), with a se
 | 已发表论文 | `_data/publications.yml` |
 | Working Papers | `_data/working_papers.yml` |
 | 照片 | `assets/img/jinhan-gao.jpg` |
+| 论文预览图 | `assets/img/publications/`，在论文数据中设置 `image` 和 `image_alt` |
 | 字体、间距、照片显示裁切 | `assets/css/custom.css` |
 
 `index.md` 开头的三行和末尾两行 `{% include ... %}` 要保留，其余正文可以自己编辑。

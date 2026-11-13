@@ -1,52 +1,50 @@
-# Homepage design QA
+# Homepage design QA — November 13 revision
 
 final result: passed
 
 **Findings**
-- No actionable P0/P1/P2 differences found against the selected Minimal Light reference and approved content changes.
+- No actionable P0/P1/P2 differences remain against the selected Minimal Light design and the user's requested changes.
 
-**Evidence and state**
-- Source visual truth: `../Homepage_Template_Previews/minimal-light-desktop.jpg` (1280 × 720 pixels).
-- Implementation: `docs/qa/desktop-top.jpg` (1280 × 720 pixels), plus `docs/qa/desktop-full.jpg` (1280 × 1436 pixels).
-- Mobile implementation: `docs/qa/mobile-full.jpg`, captured in Chrome with a 390 × 844 CSS viewport, density 1.
-- Route: `http://127.0.0.1:4000/`, initial page, light theme, no authentication required.
-- Desktop CSS viewport: 1280 × 720, density 1. Both desktop images were inspected together in one comparison input at matching pixel sizes; no density normalization was needed.
-- Full-view comparison retained the left profile/right content columns, serif type, navy headings, blue links, and white background. Focused crops were not needed: typography, photo, links, and margins were legible at native comparison size.
-- Initial IAB screenshot output had a density/scaling problem. Replaced implementation evidence with Chrome screenshots before judging fidelity.
+**Source and implementation evidence**
+- Source visual truth: `../Homepage_Template_Previews/minimal-light-desktop.jpg`, 1280 × 720 pixels.
+- User-provided figure truth: `assets/img/publications/simulation-auctions.png` (2034 × 1169) and `assets/img/publications/manufacturing-platformization.png` (1333 × 784). Copied unchanged in the requested first/second order.
+- Desktop viewport: 1280 × 720 CSS pixels, density 1; `docs/qa/revision-desktop-top.jpg` is 1280 × 720, and `docs/qa/revision-desktop-full.jpg` is 1280 × 1674.
+- Focused publication evidence: `docs/qa/revision-publications.jpg`, 1280 × 720, scrolled to Publications.
+- Mobile viewport: 390 × 844 CSS pixels, density 1; `docs/qa/revision-mobile-full.jpg` is 390 × 3208.
+- State: light theme, local homepage, no authentication required. Full-page desktop capture normalized to scrollY=0 so the fixed profile is in its correct initial position.
+- Full-view comparison: source and revised top-of-page screenshot were inspected together in one comparison input at equal pixel dimensions. The source was also jointly inspected with the full revised page. Different copy length and the requested larger type intentionally move Publications below the first viewport. No density scaling was needed.
+- Focused publication inspection confirmed the template's image-left/text-right arrangement and the two correct user figures. Small diagram labels are intentionally thumbnail-size; each thumbnail opens its original image in a separate tab.
 
 **Required fidelity surfaces**
-- Fonts and typography: original Crimson Pro serif and Ubuntu Mono email style retained, with coherent heading weights and readable line heights. Titles wrap without truncation on mobile.
-- Spacing and layout rhythm: desktop content starts at approximately x=470 and retains the 650px content column. Mobile stacks the centered profile above the content; 390px viewport and document scrollWidth both equal 390px. No horizontal overflow or overlapping content was observed.
-- Colors and tokens: navy headings, blue links, neutral body text and white canvas match the reference. Focus outlines are present for keyboard use.
-- Image quality and asset fidelity: supplied photograph is displayed via a circular CSS crop; the original image file is preserved. Face and upper body are clear. Social icons render correctly.
-- Copy and content: approved three-paragraph biography, two research interests, two published papers, two working papers, and GitHub/LinkedIn are present. The second research interest is explicitly an emerging direction. Sample identities and unsupported social profiles are absent.
+- Fonts and typography: Crimson Pro and Ubuntu Mono retained. Body and paper titles increased from 16px to 18px; related profile and link text scaled modestly. Heading hierarchy and line heights remain coherent; no truncation.
+- Spacing and layout rhythm: original 650px content column and fixed desktop profile retained. Publication rows use a 160px image column, 20px gap, and flexible text column. At widths up to 600px, images stack above text and are limited to 320px. Mobile document width equals viewport width (390px).
+- Colors and visual tokens: original navy headings, blue links, and neutral text retained. Previews have subtle neutral borders and shadows; focus outlines remain available.
+- Image quality and asset fidelity: original PNGs are displayed at natural aspect ratios with no crop or generated replacement. Both load successfully. Photo remains unchanged.
+- Copy and content: only the requested adviser hyperlink was added. Two published papers and two working papers remain in their original order. No thumbnails are invented for working papers.
 
-**Intentional deviations**
-- The approved biography is longer than the sample, moving later sections below the initial viewport.
-- Portrait increased to 160px on desktop and 144px on narrow mobile for recognizability.
-- News and Services omitted because there is no supplied content; Working Papers added as requested.
-- Paper thumbnails omitted because none were supplied; publication entries use the full content width.
-- CV link remains conditional until a public CV is selected.
-
-**Interactions and technical checks**
-- Jekyll production build passed; generated local resource targets exist.
-- Clicking the first publication Code link opened Gaojinhan/policy-cce-reproducibility and its matching paper description.
-- Mobile image loaded successfully; all four content headings were present.
-- Browser console errors/warnings: none on the local homepage.
-- Remaining test gap: physical-device Safari has not been tested. GitHub Pages deployment validation is recorded separately by its workflow run.
+**Interactions and checks**
+- Jekyll production build passed. Only upstream Sass import deprecation warnings remain.
+- Adviser link opened the Google Scholar page for Professor Mohamed EL MANSORI, Arts et Métiers ParisTech (ENSAM), with verified ensam.eu email.
+- First preview click opened the original 2034 × 1169 PNG in a new tab.
+- Keyboard Skip to content link activated successfully and returned the page to main content.
+- Browser console errors/warnings on local homepage: none.
+- Both desktop and mobile screenshots were visually inspected. Physical-device Safari is not covered.
 
 **Comparison history**
-- First normalized reference/implementation comparison: no actionable P0/P1/P2 findings; no visual fixes required afterward.
-- Additional mobile review: passed; no changes required.
+- Initial release: passed against original template with approved content substitutions.
+- User revision: larger typography, adviser Scholar link, and supplied publication images implemented.
+- Initial full-page capture briefly omitted a lazy-painted offscreen image; inspecting Publications displayed both correctly. Captures were refreshed after visible rendering; no site fix was required.
+- Initial full-page recapture was taken from a scrolled state; normalized to scrollY=0 before final desktop comparison.
+- Revised desktop and mobile comparison: passed; no actionable visual fixes required.
 
 **Open Questions**
 - None blocking release.
 
 **Implementation Checklist**
-- [x] Preserve selected template visual language.
-- [x] Check desktop and mobile screenshots.
-- [x] Verify content, loaded image, links, and console.
-- [x] Record intentional differences.
+- [x] Add and verify the adviser Scholar link.
+- [x] Enlarge body and related typography.
+- [x] Add correct publication thumbnails and full-image links.
+- [x] Verify responsive layout, images, keyboard link, and build.
 
 **Follow-up Polish**
-- None required for this release.
+- None required for this revision.

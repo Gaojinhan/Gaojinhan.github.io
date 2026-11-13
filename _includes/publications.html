@@ -3,8 +3,14 @@
 <div class="paper-list">
   <ol class="bibliography">
     {% for paper in include.papers %}
-    <li class="paper">
+    <li class="paper{% if paper.image %} paper-with-image{% endif %}">
       {% assign paper_url = paper.doi | default: paper.pdf | default: paper.page %}
+      {% if paper.image %}
+      <a class="paper-preview" href="{{ paper.image | relative_url }}" target="_blank" rel="noopener" aria-label="View full-size figure for {{ paper.title | escape }}">
+        <img src="{{ paper.image | relative_url }}" alt="{{ paper.image_alt | escape }}" width="{{ paper.image_width }}" height="{{ paper.image_height }}" loading="lazy" decoding="async">
+      </a>
+      {% endif %}
+      <div class="paper-content">
       <h3 class="paper-title">{% if paper_url %}<a href="{{ paper_url | escape }}">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}</h3>
       <div class="paper-authors">{{ paper.authors }}</div>
       {% if paper.venue %}<div class="paper-venue"><em>{{ paper.venue | escape }}</em>{% if paper.details %}, {{ paper.details | escape }}{% endif %}{% if paper.year %}, {{ paper.year }}{% endif %}.</div>{% endif %}
@@ -19,6 +25,7 @@
         {% if paper.bibtex %}<a href="{{ paper.bibtex | relative_url }}" aria-label="BibTeX for {{ paper.title | escape }}">BibTeX</a>{% endif %}
       </div>
       {% endif %}
+      </div>
     </li>
     {% endfor %}
   </ol>
